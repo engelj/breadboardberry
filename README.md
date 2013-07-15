@@ -1,8 +1,3 @@
-# -*- mode: markdown; coding: utf-8-*-
-##############################################################################
-Copyright (C) 2013 Jörg Engelhart
-License: GNU General Public License, version 2
-
 Bread Board Berry
 =================
 A quick experiment to combine a Raspberry Pi running Raspbian GNU Linux, a breadboard and some attic electronic parts. Mix that with Nodejs, Expressjs, jQuery, stur well and *Voila* there is your breadboard web interface ;-) .
@@ -11,7 +6,8 @@ Most time consuming was collecting together all the hardware on a cloudy public 
 
 Hardware
 --------
-See ![hardware.jpg](hardware.jpg)
+Let the hacking begin, warm up soldering irons ...
+![hardware.jpg](hardware.jpg)
 
 Architecture
 ------------
@@ -69,4 +65,13 @@ Going away from the standard Raspbian towards an ARMv6 realtime kernel (or at le
 Another flaw is the root access need of the server to gain legitimation to access GPIO hardware. Here a kernel driver would be way more elegant and safe. For lab conditions this may not be harmful, but never expose the server to unknown networks!
 
 Tests? Ah, right. Yep - there should be some ;-)
+
+Copyright
+---------
+Copyright (C) 2013 Jörg Engelhart
+
+
+License
+-------
+GNU General Public License, version 2
 
