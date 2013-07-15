@@ -1,0 +1,16 @@
+# -*- mode:sh; coding: utf-8 -*-
+##############################################################################
+# Copyright (c) 2013 secondscape.com
+
+*~
+\#*
+.\#*
+static/ac.js
+node_modules
+compile
+compileAll
+npm
+as.js
+htp.js
+index.html
+layout.html

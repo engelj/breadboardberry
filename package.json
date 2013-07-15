@@ -1,0 +1,20 @@
+{
+    "name": "breadboardberry",
+    "version": "0.0.1",
+    "private": true,
+    "scripts": {
+        "start": "node lib/app"
+    },
+    "dependencies": {
+        "coffee-script": "*",
+        "express": "*",
+        "jade": "*",
+        "stylus": "*",
+        "tracer": "*"
+    },
+    "devDependencies": {
+        "mocha": "*",
+        "chai": "*",
+        "should": "*"
+    }
+}
