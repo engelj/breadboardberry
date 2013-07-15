@@ -28,8 +28,10 @@ Compile <http://nodejs.org/> on the Pi / cross-compile it on your desktop. Make 
 Initialization
 --------------
 Open a shell and issue:
-`cd breadboardberry
-. init.sh`
+```
+cd breadboardberry
+. init.sh
+```
 
 Clean Up
 --------
