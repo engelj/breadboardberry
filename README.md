@@ -16,7 +16,7 @@ The software follows a single-page-app-like approach using object-oriented code 
 
 On the Pi, GPIO access requires you to enter/setup root credentials. However, the server is able to run on hardware without the Pi's GPIO (dummy mode). In this case no root access is required. This may speed up development.
 
-For GPIO, two popular npm modules (rpio and gpio) were found. They both have their issues, I finally used gpio but left rpio commented if needed later on.
+For GPIO, two popular npm modules (rpio and gpio) were found. They both have their issues, I finally used gpio but left rpio commented if needed some day.
 
 Prerequisites
 -----------
@@ -60,13 +60,11 @@ Screenshot:
 
 Flaws / ToDo
 ------------
-Clearly this is no realtime solution. Neither the polling style refresh of the GPIO reading nor the fact that there is no realtime kernel used mean that updates are limited to a few times per second max. Also be prepared that any CPU interrupts harm any timing you might hope to see.
-
-Going away from the standard Raspbian towards an ARMv6 realtime kernel (or at least using kernel drivers which can follow scheduled events) or use some Arduino style hardware inbetween would solve the hardware part. The polling could be replaced by websockets / socket.io .
-
-Another flaw is the root access need of the server to gain legitimation to access GPIO hardware. Here a kernel driver would be way more elegant and safe. For lab conditions this may not be harmful, but never expose the server to unknown networks!
-
-Tests? Ah, right. Yep - there should be some ;-)
+1. no realtime solution - this means that updates are limited to a few times per second max. Also be prepared that any CPU interrupts harm timing you might hope to see.
+ 1. Polling style refresh of the GPIO reading is used. This could be replaced by websockets / socket.io .
+ 1. No realtime kernel, no dedicated kernel driver with interrupt management. Either use a real time kernel or use some Arduino style hardware towards the breadboard. 
+1. Root access need of the overall HTTP server: This is required to gain access to GPIO hardware. Here a kernel driver would be way more elegant and safe. For lab conditions this may not be harmful, but never expose the server to unknown networks!
+1. Tests? Ah, right. Yep - there should be some ;-)
 
 Copyright
 ---------
