@@ -15,11 +15,9 @@ As part of this experiment I used <http://coffeescript.org/> to see how well it 
 
 The software follows a single-page-app-like approach using object-oriented code on the frontend. This may not be efficient in general but comes in handy when customizing the web interface for specific breadboard hardware fixtures later on.
 
-On the Pi, GPIO access requires you to enter/setup root credentials.
+On the Pi, GPIO access requires you to enter/setup root credentials. However, the server is able to run on hardware without the Pi's GPIO (dummy mode). In this case no root access is required. This may speed up development.
 
-Two Modes of Operation
-----------------------
-The server is able to run on hardware without the Pi's GPIO. In this case no root access is required. This may speed up development.
+For GPIO, two popular npm modules (rpio and gpio) were found. They both have their issues, I finally used gpio but left rpio commented if needed later on.
 
 Prerequisite
 -----------
