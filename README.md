@@ -6,7 +6,6 @@ Most time consuming was collecting together all the hardware on a cloudy public 
 
 Hardware
 --------
-Let the hacking begin, warm up soldering irons ...
 ![hardware.jpg](hardware.jpg)
 
 Architecture
@@ -19,7 +18,7 @@ On the Pi, GPIO access requires you to enter/setup root credentials. However, th
 
 For GPIO, two popular npm modules (rpio and gpio) were found. They both have their issues, I finally used gpio but left rpio commented if needed later on.
 
-Prerequisite
+Prerequisites
 -----------
 Compile <http://nodejs.org/> on the Pi / cross-compile it on your desktop. Make sure that `init.sh` sets the `PATH` to your nodejs installation's `bin`. I used nodejs/0.8.21 .
 
@@ -55,6 +54,9 @@ Make sure the run target in `Makefile` uses `sudo` when on Raspberry Pi, then
 `make run`
 
 To stop, type Ctrl-c .
+
+Screenshot:
+![screenshot.png](screenshot.png)
 
 Flaws / ToDo
 ------------
